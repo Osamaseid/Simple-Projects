@@ -1,0 +1,40 @@
+/* CSS styles for the university and student page */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .university-info,
+  .student-info {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  h2{
+    color: blue;
+  }
+  
+  .university-info h1 {
+    margin-bottom: 10px;
+  }
+  
+  .university-info p,
+  .student-info p {
+    margin-bottom: 10px;
+  }
+  
+  .student-info h2 {
+    margin-bottom: 20px;
+  }
