@@ -1,4 +1,4 @@
-
+/* BOOKK-STORRE ORDER FORM */
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,7 @@
         form {
             padding: 20px;
             background-color: powderblue;
-            border-radius: 5px;
+             border-radius: 5px;
         }
         
         input[type="text"],
@@ -34,7 +34,7 @@
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
-            border-radius: 3px;
+             border-radius: 3px;
         }
         
         input[type="submit"] {
@@ -95,15 +95,9 @@
                 quantity: quantity,
                 paymentMethod: paymentMethod
             };
-            
-            // You can perform additional logic here, such as validation or sending the order data to a server
-            
-            // Example: Display the order details in the console
             console.log(order);
-            
             // Optional: Show a confirmation message to the user
             alert('Order placed successfully!');
-            
             // Optional: Reset the form
             document.getElementById('orderForm').reset();
         });
