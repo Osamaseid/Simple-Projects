@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Priority Calculator</title>
+  <style>
+    body{
+        background-color: black;
+
+    }
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .calculator {
+    background-color: cadetblue;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .result {
+      grid-column: 1 / span 4;
+      text-align: right;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .button {
+      padding: 10px;
+      font-size: 18px;
+      text-align: center;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #e6e6e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+
+<h1> CALCULATOR</h1>
+
+    <div class="result" id="result">0</div>
+    <div class="button" onclick="clearResult()">C</div>
+    <div class="button" onclick="appendCharacter('(')">(</div>
+    <div class="button" onclick="appendCharacter(')')">)</div>
+    <div class="button" onclick="appendCharacter('/')">/</div>
+    <div class="button" onclick="appendCharacter('7')">7</div>
+    <div class="button" onclick="appendCharacter('8')">8</div>
+    <div class="button" onclick="appendCharacter('9')">9</div>
+    <div class="button" onclick="appendCharacter('*')">*</div>
+    <div class="button" onclick="appendCharacter('4')">4</div>
+    <div class="button" onclick="appendCharacter('5')">5</div>
+    <div class="button" onclick="appendCharacter('6')">6</div>
+    <div class="button" onclick="appendCharacter('-')">-</div>
+    <div class="button" onclick="appendCharacter('1')">1</div>
+    <div class="button" onclick="appendCharacter('2')">2</div>
+    <div class="button" onclick="appendCharacter('3')">3</div>
+    <div class="button" onclick="appendCharacter('+')">+</div>
+    <div class="button" onclick="appendCharacter('0')">0</div>
+    <div class="button" onclick="appendCharacter('.')">.</div>
+    <div class="button" onclick="calculateResult()">=</div>
+  </div>
+
+  <script>
+    function clearResult() {
+      document.getElementById('result').innerHTML = '0';
+    }
+
+    function appendCharacter(character) {
+      var result = document.getElementById('result').innerHTML;
+      if (result === '0') {
+        document.getElementById('result').innerHTML = character;
+      } else {
+        document.getElementById('result').innerHTML += character;
+      }
+    }
+
+    function calculateResult() {
+      var result = document.getElementById('result').innerHTML;
+      var calculatedResult = eval(result);
+      document.getElementById('result').innerHTML = calculatedResult;
+    }
+  </script>
+</body>
+</html>
